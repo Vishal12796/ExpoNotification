@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import NotificationService from './src/notification/NotificationService';
 import Navigate from './src/routes/Navigate';
 
 export default function App() {
 
   return (
-    <Navigate />
+    <>
+      <NotificationService />
+      <Navigate />
+    </>
   );
 }
 

@@ -8,7 +8,6 @@ import * as Application from 'expo-application';
 const SplashScreen: React.FC = () => {
 
     const navigation = useNavigation()
-    const notificationService = useNotificationService();
 
     useEffect(() => {
         console.log("APP ID : ", Application.applicationId)

@@ -5,13 +5,14 @@ import SplashScreen from "../screens/SplashScreen";
 import HomeScreen from "../screens/Home/HomeScreen";
 import ProfileScreen from "../screens/Profile/ProfileScreen";
 import NotificationScreen from "../screens/Notification/Notification";
+import { navigationRef } from "./NavigationService";
 
 const Stack = createNativeStackNavigator();
 
 const Navigate: React.FC = () => {
 
     return (
-        <NavigationContainer>
+        <NavigationContainer ref={navigationRef}>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="Splash" component={SplashScreen} />
                 <Stack.Screen name="Home" component={HomeScreen} />

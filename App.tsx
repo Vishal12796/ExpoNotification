@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <>
-      <NotificationService />
+      {/* <NotificationService /> */}
       <Navigate />
     </>
   );

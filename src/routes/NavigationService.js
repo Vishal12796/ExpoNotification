@@ -7,6 +7,10 @@ export function navigate(name, params) {
     navigationRef.current?.navigate(name, params);
 }
 
+export function navigateDispatch(data) {
+    navigationRef.current?.dispatch(CommonActions.reset(data));
+}
+
 export function navigateReset(name, params) {
     navigationRef.current?.dispatch(
         CommonActions.reset({

@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    rootView: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-})
+  rootView: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 
-export default styles
+export default styles;

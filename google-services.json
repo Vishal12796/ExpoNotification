@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "980322130033",
-    "project_id": "expo-notification-f4881",
-    "storage_bucket": "expo-notification-f4881.appspot.com"
+    "project_number": "1080199718195",
+    "project_id": "notify-dev-4a257",
+    "storage_bucket": "notify-dev-4a257.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:980322130033:android:528dbfa13794a66c8123d0",
+        "mobilesdk_app_id": "1:1080199718195:android:bb7ee336722b2d00160a46",
         "android_client_info": {
-          "package_name": "com.notificationdemo"
+          "package_name": "com.codejunkers.menu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "980322130033-agh4vok2a976maolmgeqio7jv0vk55eg.apps.googleusercontent.com",
+          "client_id": "1080199718195-kamg7sq03p6hrp93367p28qnhtu8u421.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAc1l5sFRnyhT5QarQfgQUy8GKhQeci78o"
+          "current_key": "AIzaSyC_O9n7Ir0raClIydKxyaQRjgHxpMWBRwg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "980322130033-agh4vok2a976maolmgeqio7jv0vk55eg.apps.googleusercontent.com",
+              "client_id": "1080199718195-kamg7sq03p6hrp93367p28qnhtu8u421.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

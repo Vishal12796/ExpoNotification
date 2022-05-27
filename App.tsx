@@ -1,23 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import NotificationService from './src/notification/NotificationService';
-import Navigate from './src/routes/Navigate';
+import { StyleSheet } from "react-native";
+import { NotificationProvider } from "./src/provider/NotificationProvider";
+import Navigate from "./src/routes/Navigate";
 
 export default function App() {
-
   return (
-    <>
-      {/* <NotificationService /> */}
+    <NotificationProvider>
       <Navigate />
-    </>
+    </NotificationProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

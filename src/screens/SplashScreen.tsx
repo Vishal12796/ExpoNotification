@@ -18,11 +18,7 @@ const SplashScreen: React.FC = () => {
     }, 3000);
   }, []);
 
-  return (
-    <SafeAreaView style={styles.rootView}>
-      <Text>Notification Demo</Text>
-    </SafeAreaView>
-  );
+  return <SafeAreaView style={styles.rootView}></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -30,6 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "red",
   },
 });
 

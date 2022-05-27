@@ -6,9 +6,8 @@ import * as Clipboard from "expo-clipboard";
 import { navigateDispatch, navigationRef } from "../routes/NavigationService";
 
 export enum NotificationTypes {
-  HOME = "1",
-  PROFILE = "2",
-  NOTIFICATION = "3",
+  PROFILE = "Profile",
+  NOTIFICATION = "Notification",
 }
 
 Notifications.setNotificationHandler({
@@ -49,7 +48,6 @@ Notifications.addNotificationResponseReceivedListener((response) => {
     JSON.stringify(response)
   );
 
-  global.notificationData = response;
   (async () => {
     console.log("******* Start Loop :  ");
     await checkNavigation(); // loop until navigator is ready
@@ -140,9 +138,6 @@ export const notificationType = (response: any) => {
   }
 
   switch (notification_Type) {
-    case NotificationTypes.HOME:
-      notificationHome(notificationData);
-      break;
     case NotificationTypes.PROFILE:
       notificationProfile(notificationData);
       break;
@@ -150,29 +145,14 @@ export const notificationType = (response: any) => {
       notificationNotification(notificationData);
       break;
     default:
+      global.notificationData = undefined;
       break;
-  }
-};
-
-export const notificationHome = (notificationData: any) => {
-  try {
-    console.log(
-      "notificationHome Notification Data : ",
-      JSON.stringify(notificationData)
-    );
-    const data = {
-      ...INITIAL_STATE,
-      routes: [{ key: "Home-1", name: "Home", params: { notificationData } }],
-      index: 0,
-    };
-    console.log("notificationHome : ", JSON.stringify(data));
-  } catch (err) {
-    console.log("notificationHome Err : ", err);
   }
 };
 
 export const notificationProfile = (notificationData: any) => {
   try {
+    global.notificationData = notificationData;
     console.log(
       "notificationProfile Notification Data : ",
       JSON.stringify(notificationData)
@@ -195,6 +175,7 @@ export const notificationProfile = (notificationData: any) => {
 
 export const notificationNotification = (notificationData: any) => {
   try {
+    global.notificationData = notificationData;
     console.log(
       "notificationNotification Notification Data : ",
       JSON.stringify(notificationData)

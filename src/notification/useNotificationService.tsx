@@ -55,25 +55,16 @@ Notifications.addNotificationResponseReceivedListener((response) => {
 });
 
 const useNotificationService = () => {
-  const notificationListener = useRef();
-  const responseListener = useRef();
-  const [navState, setNavState] = useState<any>(INITIAL_STATE);
 
   useEffect(() => {
     registerForPushNotificationsAsync().then((token) => {
       console.log("Notification Token : ", token);
       Clipboard.setStringAsync("Token: " + token);
     });
-
-    return () => {
-      Notifications.removeNotificationSubscription(
-        notificationListener.current
-      );
-      Notifications.removeNotificationSubscription(responseListener.current);
-    };
   }, []);
 
-  return { navState };
+  return {};
+
 };
 
 async function registerForPushNotificationsAsync() {

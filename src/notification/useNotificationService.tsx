@@ -13,7 +13,7 @@ export enum NotificationTypes {
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
-    shouldPlaySound: false,
+    shouldPlaySound: true,
     shouldSetBadge: false,
   }),
 });
@@ -25,7 +25,6 @@ const INITIAL_STATE = {
 
 function getDefaultRoute() {
   return {
-    routeName: ["Home"],
     route: [{ key: "Home-1", name: "Home" }],
   };
 }
@@ -91,8 +90,8 @@ async function registerForPushNotificationsAsync() {
       alert("Failed to get push token for push notification!");
       return;
     }
-    let expoToken = (await Notifications.getExpoPushTokenAsync()).data;
-    console.log("***************** Expo Token : ", expoToken);
+    // let expoToken = (await Notifications.getExpoPushTokenAsync()).data;
+    // console.log("***************** Expo Token : ", expoToken);
 
     token = (await Notifications.getDevicePushTokenAsync()).data;
   } else {
